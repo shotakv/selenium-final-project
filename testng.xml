@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestSuite" parallel="tests" thread-count="3">  <!--if there are more than 3 threads, firefox keeps getting stuck-->
+
+    <test name="ChromeTest">
+        <parameter name="browser" value="Chrome" />
+        <classes>
+            <class name="LandingPageTests">
+            </class>
+            <class name="HolidayPageTests">
+            </class>
+            <class name="MoviePageTests">
+            </class>
+
+        </classes>
+    </test>
+    <test name="FirefoxTests">
+        <parameter name="browser" value="firefox" />
+        <classes>
+            <class name="LandingPageTests">
+            </class>
+            <class name="HolidayPageTests">
+            </class>
+            <class name="MoviePageTests">
+            </class>
+
+        </classes>
+    </test>
+
+    <test name="EdgeTest">
+        <parameter name="browser" value="Edge" />
+        <classes>
+            <class name="LandingPageTests">
+            </class>
+            <class name="HolidayPageTests">
+            </class>
+            <class name="MoviePageTests">
+            </class>
+        </classes>
+    </test>
+
+
+</suite>
